@@ -34,4 +34,8 @@ export const router = createBrowserRouter([
   { path: '/order-success', Component: OrderSuccess },
   { path: '/login', Component: Login },
   { path: '/signup', Component: SignUp },
-])
+
+],
+{
+  basename: "/frontend/"
+})
