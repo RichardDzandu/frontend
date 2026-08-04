@@ -59,7 +59,7 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className="flex gap-6">
+      <div className=" gap-6">
         {/* Sidebar */}
         <aside className="hidden md:flex flex-col gap-1 w-48 shrink-0">
           {tabs.map((tab) => (
@@ -85,12 +85,12 @@ export default function Dashboard() {
         </aside>
 
         {/* Mobile tabs */}
-        <div className="md:hidden w-full mb-4 flex gap-2 overflow-x-auto">
+        <div className="md:hidden w-full mb-4 flex gap-1 overflow-x-auto">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setSearchParams(tab.id === 'overview' ? {} : { tab: tab.id })}
-              className={`shrink-0 px-4 py-2 rounded-full text-xs font-semibold border transition-colors ${
+              className={`shrink-0 px-2 py-2 rounded-full text-xs font-semibold border transition-colors ${
                 activeTab === tab.id
                   ? 'bg-[#1d1d1f] text-white border-[#1d1d1f]'
                   : 'text-[#1d1d1f] border-[#d2d2d7]'
